@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">   <!--编码-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,user-scalable=0">  <!--视图-->
+    <link href="Pack/style.css" rel="stylesheet">
+  </head>
+  <body data-status="index">
+  <!--<body>-->
+    <canvas id="game"></canvas>
+    <div class="ui-score"><div id="label1">分数</div><div id="scoring">0</div></div>
+    <div class="ui-index">
+      <h1>飞机大作战</h1>
+      <div class="btn-group">
+        <button class="js-start btn">开始游戏</button>
+        <button class="js-setting btn">游戏设置</button>
+        <button class="js-rule btn">游戏说明</button>
+        <button class="js-rank btn">分数排名</button>
+      </div>
+    </div>
+    <div class="ui-login ui-panel">
+        <h2>请输入你的名字：</h2>
+        <input id="userID">
+        <button class="js-login btn">OK</button>
+    </div>
+    <div class="ui-prompt ui-panel">
+      <h2>名字不能为空哦(o´ω`o)</h2>
+      <button class="js-confirm-prompt">我知道了</button>
+    </div>
+    <div class="ui-rule ui-panel">
+      <h2>游戏说明</h2>
+      <p>移动飞机进行射击。打中大飞机得50分，打中小飞机得10分。</p>
+      <button class="js-confirm-rule">我知道了</button>
+    </div>
+    <div class="ui-setting ui-panel">
+      <h2>游戏设置</h2>
+      <ul class="setting-group">
+        <li class="setting">
+          <span class="setting-title">子弹选择</span>
+          <select id="setting-bullet">
+            <option value="1">激光导弹</option>
+            <option value="2">圆形榴弹</option>
+          </select>
+        </li>
+        <li class="setting">
+          <span class="setting-title">背景设置</span>
+          <select id="setting-bg">
+            <option value="1">红色宇宙</option>
+            <option value="2">神秘星云</option>
+            <option value="3">璀璨夜空</option>
+            <option value="4">社会猪猪</option>
+          </select>
+        </li>
+        <li class="setting">
+          <span class="setting-title">战机设置</span>
+          <select id="setting-plane">
+            <option value="bluePlaneIcon">蓝色战机</option>
+            <option value="pinkPlaneIcon">粉红战机</option>
+          </select>
+        </li>
+      </ul>
+      <button class="js-confirm-setting">确认设置</button>
+    </div>
+    <div class="ui-rank ui-panel">
+      <h2>历史排名</h2>
+      <table cellpadding="0" border="1" cellspacing="0">
+          <tr>
+              <th style="width: 20%">排名</th><th>姓名</th><th>得分</th>
+          </tr>
+          <tr>
+              <td>1</td><td id="name1"></td><td id="record1"></td>
+          </tr>
+          <tr>
+              <td>2</td><td id="name2"></td><td id="record2"></td>
+          </tr>
+          <tr>
+              <td>3</td><td id="name3"></td><td id="record3"></td>
+          </tr>
+          <tr>
+              <td>4</td><td id="name4"></td><td id="record4"></td>
+          </tr>
+          <tr>
+              <td>5</td><td id="name5"></td><td id="record5"></td>
+          </tr>
+      </table>
+      <button class="js-confirm-rule">我知道了</button>
+    </div>
+    <div class="ui-end ui-panel">
+      <h1>Game Over</h1>
+      <h3 id="username"></h3>
+      <p>你一共获得&nbsp;<span id="score">0</span>&nbsp;分</p>
+      <p>你的最高分&nbsp;<span id="record">0</span>&nbsp;分</p>
+      <button class="js-again">再来一次</button>
+      <button class="js-back">回到主菜单</button>
+    </div>
+     <!--页面 js--> 
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/resource.js"></script>
+    <script src="js/element.js"></script>
+    <script src="js/enemy.js"></script>
+    <script src="js/bullet.js"></script>
+    <script src="js/plane.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

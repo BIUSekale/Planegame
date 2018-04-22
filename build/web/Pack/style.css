@@ -1,0 +1,158 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2018-4-17, 15:58:27
+    Author     : 83505
+*/
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background-image: url('.././img/bg_1.jpg');
+  color: #fff;
+  background-size: cover;
+  margin: 0;
+}
+
+.ui-index {
+  display: none;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  margin-top: -142px;
+}
+
+.ui-index h1 {
+  font-size: 50px;
+  text-shadow: 2px 8px 2px #000;
+  text-align: center;
+  background: rgba(39, 35, 34, 0.16);
+}
+
+.ui-index .btn {
+  display: block;
+  color: #fff;
+  font-size: 20px;
+  background: none;
+  border: 1px solid #999;
+  border-radius: 6px;
+  width: 140px;
+  /* margin-bottom: 14px; */
+  /* 上右下左 */
+  margin: 0 auto 14px auto;
+  background: rgba(39, 35, 34, 0.46);
+}
+
+.ui-score {
+  position: absolute;
+  top: 2%;
+  right: 3%;
+  width: 19%;
+}
+
+.ui-score div {
+    width: 50%;
+    float: left;
+    text-align: center;
+    padding: 5% 0 5% 0;
+}
+
+.ui-score #label1 {
+    background: black;
+}
+
+.ui-score #scoring {
+    background: rgba(112, 112, 112, 0.43);
+}
+
+.ui-panel {
+  width: 80%;
+  background: #070808;
+  padding: 14px;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  text-align: center;
+  box-sizing: border-box;
+  position: absolute;
+  left: 10%;
+  top: 50%;
+  margin-top: -109px;
+}
+
+
+.ui-panel button {
+  color: #fff;
+  border: 1px solid #fff;
+  background: none;
+  font-size: 18px;
+}
+
+
+.ui-panel table {
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 10%
+}
+
+
+.setting-group {
+  list-style: none;
+  padding: 0;
+}
+
+.setting-group .setting {
+  margin-bottom: 10px;
+}
+
+.setting-group select {
+  width: 100px;
+  background: #fff;
+  margin-left: 10px;
+  border-radius: 0;
+}
+
+/*ui 默认是隐藏*/
+.ui-index,
+.ui-login,
+.ui-rule,
+.ui-end,
+.ui-rank,
+.ui-prompt,
+.ui-score,
+.ui-setting {
+  display: none;
+}
+
+/*游戏状态切换场景*/
+[data-status="login"] .ui-login {
+  display: block;
+} 
+[data-status="prompt"] .ui-login{
+  display: block;
+} 
+[data-status="prompt"] .ui-prompt{
+  display: block;
+} 
+[data-status="index"] .ui-index {
+  display: block;
+} 
+[data-status="setting"] .ui-setting {
+  display: block;
+} 
+[data-status="rule"] .ui-rule {
+  display: block;
+} 
+[data-status="end"] .ui-end {
+  display: block;
+} 
+[data-status="rank"] .ui-rank {
+  display: block;
+} 
+[data-status="start"] .ui-score {
+  display: block;
+} 
